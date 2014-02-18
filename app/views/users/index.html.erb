@@ -1,0 +1,15 @@
+<table>
+	<tr>
+		<td>Name</td>
+		<td>Email</td>
+		<td>Password</td>
+	</tr>
+	<% User.all.each do |user| %>
+	<tr>
+		<td><%= user.name %></td>
+		<td><%= user.email %></td>
+		<td><%= user.password %></td>
+	</tr>
+	<% end %>
+</table>
+<%= link_to "Back to Home", home_index_path %>
