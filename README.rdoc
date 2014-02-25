@@ -1,6 +1,6 @@
 == README
 
-heroku link: http://thawing-meadow-2332.herokuapp.com/home/index
+heroku link: http://thawing-meadow-2332.herokuapp.com/
 
 I decided to make the syllabus app. I changed the name to LunchBreak. 
 The point of this app would be to have the schedules of you and your friends.
