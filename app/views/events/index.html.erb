@@ -12,8 +12,12 @@
 		<td><%= event.date %></td>
 		<td><%= event.time %></td>
 		<td><%= event.description %></td>
-		<td><%= event.user.name %></td>
+		<td><%= event.user.name unless event.user.nil? %></td>
+		<td><%= link_to "Show Event", event_path(event.id) %></td>
+		<td><%= link_to "Edit Event", edit_event_path(event.id) %></td>
+		<td><%= button_to "Destroy Event", event, confirm: "Are you sure you want to delete this user?", method: :delete %></td>
 	</tr>
 	<% end %>
 </table>
+<%= link_to "New Event", new_event_path %>
 <%= link_to "Back to Home", home_index_path %>
