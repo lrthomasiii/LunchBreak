@@ -1,27 +1,43 @@
 class EventsController < ApplicationController
   def index
-  	@events = Event.all
+    if user_signed_in?
+      @events = Event.all
+    else
+      @events = []
+    end
   end
 
   def new
-  	@event = Event.new
+    if user_signed_in?
+      @event = Event.new
+    else
+      redirect_to new_user_session_path
+    end
   end
 
   def create
   	@event = Event.new(event_params)
-  	if @event.save
-  		redirect_to events_path
-  	else
-  		render 'new'
-  	end
+  	if @event.user_id != current_user.id
+      render 'new'
+    else
+      if @event.save
+        redirect_to events_path
+      else
+        render 'new'
+      end
+    end
   end
 
   def update
     @event = Event.find(params[:id])
-    if @event.update_attributes(event_params)
-      redirect_to event_path(@event.id)
-    else
+    if @event.user_id != current_user.id
       render 'edit'
+    else
+      if @event.update_attributes(event_params)
+        redirect_to event_path(@event.id)
+      else
+        render 'edit'
+      end
     end
   end
 

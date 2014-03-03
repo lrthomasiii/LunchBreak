@@ -49,3 +49,5 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+gem 'devise', '3.0'

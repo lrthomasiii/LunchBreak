@@ -16,8 +16,7 @@
 		<%= f.text_area :description %>
 	</div>
 	<div class="field">
-		<p>User</p>
-		<%= f.collection_select :user_id, User.all, :id, :name %>
+		<%= f.hidden_field :user_id, :value => current_user.id %>
 	</div>
 	<div class="actions">
 		<%= f.submit %>
