@@ -21,6 +21,7 @@ class EventsController < ApplicationController
       render 'new'
     else
       if @event.save
+        Notifications.new_event(@event).deliver
         redirect_to events_path
       else
         render 'new'
