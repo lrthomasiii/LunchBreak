@@ -1,7 +1,11 @@
 <div>
 	<h2><%= @user.name %></h2>
 	<p><%= @user.email %></p>
-	<p><%= @user.password %></p>
 </div>
-<%= link_to "Back to Users", users_path %>
-<%= link_to "Back to Home", home_index_path %>
+<% @events.each do |event| %>
+	<div class="dash-review">
+		<h2><%= link_to event.title, event_path(event.id) %></h2>
+		<p><%= event.user.name %></p>
+		<p><%= event.description %></p>
+	</div>
+<% end %>

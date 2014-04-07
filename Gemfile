@@ -12,7 +12,7 @@ group :production do
  				gem 'pg'
  		end
 
-
+gem 'devise', '3.0'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
@@ -50,5 +50,3 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
-
-gem 'devise', '3.0'

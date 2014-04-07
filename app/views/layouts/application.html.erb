@@ -10,11 +10,28 @@
 
 <div class="navbar">
 <ul class="nav">
+	<li class='dropdown'><a class="nav-link" href="#">Users</a>
+		<ul>
+			<li><%= link_to "All Users", users_path %></li>
+		</ul>
+	</li>
+	<li class='dropdown'><a class="nav-link" href="#">Events</a>
+		<ul>
+			<li><%= link_to "New Event", new_event_path %></li>
+			<li><%= link_to "All Events", events_path %></li>
+		</ul>
+	</li>
 	<% if !user_signed_in? %>
 	<li>
 		<%= link_to "Login", new_user_session_path, :class => "nav-link" %>
 	</li>
 	<% else %>
+	<li>
+		<%= link_to "Dashboard", dashboard_path, :class => "nav-link" %>
+	</li>
+	<li>
+		<%= link_to "Edit Profile", edit_user_registration_path, :class => "nav-link" %>
+	</li>
 	<li>
 		<%= link_to "Logout", destroy_user_session_path, :method => :delete, :class => "nav-link" %>
 	</li>

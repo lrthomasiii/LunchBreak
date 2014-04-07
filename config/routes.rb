@@ -11,7 +11,10 @@ LunchBreak::Application.routes.draw do
   root "home#index"
   #resources :users
   devise_for :users do get '/users/sign_out' => 'devise/sessions#destroy' end
+  resources :users, only: [:index, :show]
   resources :events
+  resources :followers, only: [:create, :destroy]
+  get "dashboard", to: "users#dash"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
