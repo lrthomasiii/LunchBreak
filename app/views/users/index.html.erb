@@ -4,7 +4,7 @@
 		<td>Email</td>
 		<td>Password</td>
 	</tr>
-	<% User.all.each do |user| %>
+	<% @users.each do |user| %>
 	<tr>
 		<td><%= link_to user.name, user_path(user.id) %></td>
 		<td><%= user.email %></td>

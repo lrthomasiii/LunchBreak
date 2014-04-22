@@ -2,10 +2,15 @@
 	<h2><%= @user.name %></h2>
 	<p><%= @user.email %></p>
 </div>
+
+<button class="hide-btn-u">Hide Events</button>
+
+<div class="events">
 <% @events.each do |event| %>
 	<div class="dash-review">
 		<h2><%= link_to event.title, event_path(event.id) %></h2>
 		<p><%= event.user.name %></p>
 		<p><%= event.description %></p>
 	</div>
-<% end %>
+	<% end %>
+</div>

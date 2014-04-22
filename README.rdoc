@@ -2,10 +2,4 @@
 
 heroku link: http://thawing-meadow-2332.herokuapp.com/
 
-I decided to make the syllabus app. I changed the name to LunchBreak. 
-The point of this app would be to have the schedules of you and your friends.
-You would be able to see when they are free or also if you have any of the 
-same classes or activities. 
-The database contains 2 tables as of now. It has users, which contains names,
-emails, and passwords. It also has events. Events have titles, dates, times, 
-descriptions, and the users which they belong to.
+
