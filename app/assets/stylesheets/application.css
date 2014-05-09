@@ -15,3 +15,114 @@
 .hide{
 	display: none;
 }
+
+.left{
+	float: left;
+}
+
+.right{
+	float: right;
+	margin-right: 70px;
+}
+
+.nav{
+	position: relative;
+	top:0;
+	width: 100%;
+	background: #141452;
+	height:42px;
+	box-shadow: 0px 0px 10px #333;
+}
+
+ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.nav li{
+	display: inline;
+}
+
+.nav-link{
+	padding:10px;
+	padding-top:15px;
+	padding-bottom:15px;
+	text-decoration:none;
+	color: #141452;
+	float:left;
+}
+
+.dropdown ul{
+	display:none;
+	width:10em;
+}
+
+.dropdown:hover ul{
+	position:absolute;
+	display:block;
+	top:40px;
+	margin:0;
+	padding:0;
+	z-index:5;
+}
+
+.dropdown li{
+	display:block;
+	float:none;
+	list-style-type:none;
+	background-color: #141452;
+	padding:5px;
+}
+
+.dropdown li a{
+	text-align:left;
+	text-decoration:none;
+	float:none;
+	padding:10px 15px 10px;
+	color:white;
+	text-decoration:none;
+	text-shadow:0 1px 0 #282828;
+}
+
+.header{
+	font-family: Helvetica, Arial, sans-serif;
+	font-size:40px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.para{
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 15px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.dash-review h2 a{
+	text-decoration:none;
+	color:#0047b2;
+}
+
+.dash-review p a{
+	text-decoration:none;
+	color:#0047b2;
+}
+
+.eventlink a{
+	text-decoration:none;
+	color: #0047b2;
+}
+
+.userlink a{
+	text-decoration:none;
+	color: #0047b2;
+}
+
+h2{
+	color: #141452;
+}
+
+td{
+	color: #141452;
+}

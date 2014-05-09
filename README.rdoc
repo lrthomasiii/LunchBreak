@@ -2,4 +2,8 @@
 
 heroku link: http://thawing-meadow-2332.herokuapp.com/
 
+LunchBreak:
+LunchBreak is a social event manager. You can add and delete your events. You can also follow your friends, making it easy to see what their plans are. There are validations that make sure the formats you use(date,time,etc.) are correct. There are also queries that help find different things when using the search bar. I also used Javascript to enable the ability to hide and show events. I used devise as my gem. Devise helps authenticate things such as users. I also used SendGrid as my heroku add on. Sendgrid sends emails to the user when they create a new event or have a new follower. 
 
+Gem link: http://devise.plataformatec.com.br/
+Addon link: https://devcenter.heroku.com/articles/sendgrid

@@ -15,9 +15,9 @@
 		<td><%= event.time %></td>
 		<td><%= event.description %></td>
 		<td><%= event.user.name unless event.user.nil? %></td>
-		<td><%= link_to "Show Event", event_path(event.id) %></td>
+		<td class="eventlink"><%= link_to "Show Event", event_path(event.id) %></td>
 		<td><%= button_to "Destroy Event", event, confirm: "Are you sure you want to delete this event?", method: :delete %></td>
-		<td><%= link_to "Edit Event", edit_event_path(event.id) %></td>
+		<td class="eventlink"><%= link_to "Edit Event", edit_event_path(event.id) %></td>
 
 	<td><button class="hide-btn-e">Hide Event</button></td>
 		

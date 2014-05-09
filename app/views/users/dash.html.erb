@@ -1,8 +1,9 @@
-<h2><%= @user.name %>'s dashboard</h2>
+<h2><%= @user.name %>'s Dashboard</h2>
 
 <% @events.each do |event| %>
 	<div class="dash-review">
 		<h2><%= link_to event.title, event_path(event.id) %></h2>
-		<p><%= link_to event.user.name, user_path(event.user_id) %></p>
+		<p>User: <%= link_to event.user.name, user_path(event.user_id) %></p>
+		<p>------------------------------------------------------------------</p>
 	</div>
 <% end %>

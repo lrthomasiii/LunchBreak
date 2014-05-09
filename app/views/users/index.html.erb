@@ -2,13 +2,14 @@
 	<tr>
 		<td>Name</td>
 		<td>Email</td>
-		<td>Password</td>
+		<td>Follow</td>
 	</tr>
 	<% @users.each do |user| %>
 	<tr>
-		<td><%= link_to user.name, user_path(user.id) %></td>
+		<td class="userlink"><%= link_to user.name, user_path(user.id) %></td>
 		<td><%= user.email %></td>
-		
+		<% if user_signed_in? %>
+		<% if user.id != current_user.id %>
 		<% if Follower.where("follower_id = ? AND followee_id = ?", current_user.id, user.id).empty? %>
 			<td>
 				<%= form_for(Follower.new) do |f| %>
@@ -26,6 +27,8 @@
 		<% else %>
 			<td><%= button_to "Unfollow", Follower.where("follower_id = ? AND followee_id = ?", current_user.id, user.id).take!, method: :delete %></td>
 		<% end %>
+		<%end%>
+		<%end%>
 	</tr>
 	<% end %>
 </table>
